@@ -1,0 +1,15 @@
+# Ассоциируем расширение .gz с gzip
+# AddEncoding gzip .gz
+
+# Запрещаем доступ к базе данных пользователям
+<Files "data.db">
+	order allow,deny
+	deny from all
+</Files>
+
+RewriteEngine On
+AddType application/json .gz
+AddEncoding gzip .gz
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}.gz -f
+RewriteRule ^(.*)$ $1.gz [QSA,L]
