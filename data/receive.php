@@ -63,17 +63,6 @@ if ($option == "addFile") { // Add receieved file to this directory
 		$db = new PDO('sqlite:data.db');
 		if (!isSet($_GET["type"])) {$type = "other";} else {$type = $_GET["type"];};
 		// Add operation to database
-		/*
-		$db->exec(sprintf("
-			INSERT INTO operations (world_name, mission_name, mission_duration, filename, date, type) VALUES (
-				'%s',
-				'%s',
-				%d,
-				'%s',
-				'%s',
-				'%s'
-			)
-		", addslashes($_GET["worldName"]), addslashes($_GET["missionName"]), $_GET["missionDuration"], addslashes($_GET["filename"]), $date, $type));*/
 		// TODO: Increment local capture count
 		$stmt = $db -> prepare("INSERT INTO operations (world_name, mission_name, mission_duration, filename, date, type) VALUES (
 				:world_name,
