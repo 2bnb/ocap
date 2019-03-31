@@ -3,3 +3,6 @@
 		SetOutputFilter DEFLATE
 	</Files>
 </IfModule>
+
+php_value upload_max_filesize 999999M
+php_value post_max_size 999999M
