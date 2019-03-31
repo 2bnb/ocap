@@ -4,5 +4,5 @@
 	</Files>
 </IfModule>
 
-php_value upload_max_filesize 999999M
-php_value post_max_size 999999M
+php_value upload_max_filesize 99M
+php_value post_max_size 99M
