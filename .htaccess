@@ -1,0 +1,11 @@
+<IfModule mod_deflate.c>
+	<Files *.json>
+		SetOutputFilter DEFLATE
+	</Files>
+</IfModule>
+
+php_value memory_limit 128M
+
+php_value upload_max_filesize 964M
+
+php_value post_max_size 964M
