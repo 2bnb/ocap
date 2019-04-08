@@ -394,7 +394,7 @@ class UI {
 		var DateNewer = calendar1.value;
 		var DateOlder = calendar2.value;
 		$.ajax({
-			url: 'ListOps.php',
+			url: 'listOps.php',
 			type : "POST",
 			async : false,
 			cache : false,
